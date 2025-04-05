@@ -1,0 +1,9 @@
+darkdetect
+PySide6
+pyperclip
+pynput
+markdown2
+google-generativeai
+ollama
+openai
+requests 

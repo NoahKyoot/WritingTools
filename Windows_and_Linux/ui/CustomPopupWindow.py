@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import sys
+import webbrowser
 from functools import partial
 
 from PySide6 import QtCore, QtGui, QtWidgets
@@ -894,8 +895,14 @@ class CustomPopupWindow(QtWidgets.QWidget):
     def on_custom_change(self):
         txt = self.custom_input.text().strip()
         if txt:
-            self.app.process_option('Custom', self.selected_text, txt)
-            self.close()
+            if txt.startswith("R "):
+                search_query = txt[2:].strip()
+                radiopaedia_url = f"https://www.radiopaedia.org/search?num=50&safe=off&site=&source=hp&q={search_query}&btnG=Search&oq=&gs_l="
+                webbrowser.open(radiopaedia_url)
+                self.close()
+            else:
+                self.app.process_option('Custom', self.selected_text, txt)
+                self.close()
 
     def on_generic_instruction(self, instruction):
         if not self.edit_mode:
