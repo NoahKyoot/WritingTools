@@ -900,6 +900,21 @@ class CustomPopupWindow(QtWidgets.QWidget):
                 radiopaedia_url = f"https://www.radiopaedia.org/search?num=50&safe=off&site=&source=hp&q={search_query}&btnG=Search&oq=&gs_l="
                 webbrowser.open(radiopaedia_url)
                 self.close()
+            elif txt.startswith("RA "):
+                search_query = txt[3:].strip()
+                radiology_assistant_url = f"https://www.radiologyassistant.nl/search?q={search_query}"
+                webbrowser.open(radiology_assistant_url)
+                self.close()
+            elif txt.startswith("S "):
+                search_query = txt[2:].strip()
+                statdx_url = f"https://app.statdx.com/search?term={search_query}&startIndex=0&documentTypeFilters=all&searchType=documents&category=All"
+                webbrowser.open(statdx_url)
+                self.close()
+            elif txt.startswith("I "):
+                search_query = txt[2:].strip()
+                google_images_url = f"https://www.google.com/search?num=50&safe=off&site=&tbm=isch&q=radiology%20{search_query}"
+                webbrowser.open(google_images_url)
+                self.close()
             else:
                 self.app.process_option('Custom', self.selected_text, txt)
                 self.close()
