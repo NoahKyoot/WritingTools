@@ -337,6 +337,7 @@ class CustomPopupWindow(QtWidgets.QWidget):
         self.selected_text = selected_text
         self.edit_mode = False
         self.has_text = bool(selected_text.strip())
+        self.search_mode = None  # Track which search mode is active
         
         self.drag_label = None
         self.edit_button = None
@@ -351,40 +352,39 @@ class CustomPopupWindow(QtWidgets.QWidget):
         self.init_ui()
 
     def init_ui(self):
-        logging.debug('Setting up CustomPopupWindow UI')
-        self.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint | QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setWindowTitle("Writing Tools")
-        
-        main_layout = QtWidgets.QVBoxLayout(self)
-        main_layout.setContentsMargins(0,0,0,0)
-        
-        self.background = ThemeBackground(
-            self, 
-            self.app.config.get('theme','gradient'),
-            is_popup=True,
-            border_radius=10
-        )
+        # Create the main layout
+        main_layout = QVBoxLayout(self)
+        main_layout.setContentsMargins(0, 0, 0, 0)
+        main_layout.setSpacing(0)
+
+        # Create the background widget with rounded corners
+        self.background = ThemeBackground()
+        self.background.setObjectName("background")
+        self.background.setStyleSheet(f"""
+            #background {{
+                background-color: {'rgba(0, 0, 0, 0.8)' if colorMode == 'dark' else 'rgba(255, 255, 255, 0.8)'};
+                border-radius: 12px;
+            }}
+        """)
         main_layout.addWidget(self.background)
-        
-        content_layout = QtWidgets.QVBoxLayout(self.background)
-        # Margin Control
-        content_layout.setContentsMargins(10, 4, 10, 10)
-        content_layout.setSpacing(10)
-        
-        # TOP BAR LAYOUT & STYLE
+
+        # Create the content layout inside the background
+        content_layout = QVBoxLayout(self.background)
+        content_layout.setContentsMargins(16, 16, 16, 16)
+        content_layout.setSpacing(16)
+
+        # Top bar with edit button and close button
         top_bar = QHBoxLayout()
         top_bar.setContentsMargins(0, 0, 0, 0)
-        top_bar.setSpacing(0)
+        top_bar.setSpacing(8)
 
-        # The "Edit"/"Done" button (left), same exact size as close button
+        # Edit button (hidden in edit mode)
         self.edit_button = QPushButton()
-        pencil_icon = os.path.join(os.path.dirname(sys.argv[0]),
-                                'icons',
-                                'pencil' + ('_dark' if colorMode=='dark' else '_light') + '.png')
-        if os.path.exists(pencil_icon):
-            self.edit_button.setIcon(QtGui.QIcon(pencil_icon))
-        # Reduced size to 24x24 to shrink top bar
+        edit_icon_path = os.path.join(os.path.dirname(sys.argv[0]), 'icons',
+                                    'edit' + ('_dark' if colorMode=='dark' else '_light') + '.png')
+        if os.path.exists(edit_icon_path):
+            self.edit_button.setIcon(QtGui.QIcon(edit_icon_path))
+        self.edit_button.setText("")
         self.edit_button.setFixedSize(24, 24)
         self.edit_button.setStyleSheet(f"""
             QPushButton {{
@@ -392,7 +392,6 @@ class CustomPopupWindow(QtWidgets.QWidget):
                 border: none;
                 border-radius: 6px;
                 padding: 0px;
-                margin-top: 3px;
             }}
             QPushButton:hover {{
                 background-color: {'#333' if colorMode=='dark' else '#ebebeb'};
@@ -456,7 +455,6 @@ class CustomPopupWindow(QtWidgets.QWidget):
         top_bar.addWidget(self.close_button, 0, Qt.AlignRight)
         content_layout.addLayout(top_bar)
 
-        
         # Input area (hidden in edit mode)
         self.input_area = QWidget()
         input_layout = QHBoxLayout(self.input_area)
@@ -501,6 +499,7 @@ class CustomPopupWindow(QtWidgets.QWidget):
         
         content_layout.addWidget(self.input_area)
         
+        # If text is selected, show the default AI actions
         if self.has_text:
             self.build_buttons_list()
             self.rebuild_grid_layout(content_layout)
@@ -893,30 +892,53 @@ class CustomPopupWindow(QtWidgets.QWidget):
             new_data[b.key] = data[b.key]
         self.save_options(new_data)
 
+    def handle_text_change(self, text):
+        # Convert to uppercase for case-insensitive comparison
+        text_upper = text.upper()
+        
+        # Check for search prefixes
+        if text_upper.startswith("R "):
+            self.custom_input.clear()  # Clear the input
+            self.custom_input.setPlaceholderText("Search Radiopaedia...")
+            self.search_mode = "radiopaedia"
+        elif text_upper.startswith("RA "):
+            self.custom_input.clear()  # Clear the input
+            self.custom_input.setPlaceholderText("Search Radiology Assistant...")
+            self.search_mode = "radiology_assistant"
+        elif text_upper.startswith("S "):
+            self.custom_input.clear()  # Clear the input
+            self.custom_input.setPlaceholderText("Search StatDx...")
+            self.search_mode = "statdx"
+        elif text_upper.startswith("I "):
+            self.custom_input.clear()  # Clear the input
+            self.custom_input.setPlaceholderText("Search Google Images...")
+            self.search_mode = "google_images"
+        elif not text:  # If text is empty, reset to default
+            self.custom_input.setPlaceholderText("Graydient")
+            self.search_mode = None
+        # Don't change search_mode if text exists but doesn't start with a prefix
+
     def on_custom_change(self):
         txt = self.custom_input.text().strip()
         if txt:
-            if txt.startswith("R "):
-                search_query = txt[2:].strip()
-                radiopaedia_url = f"https://www.radiopaedia.org/search?num=50&safe=off&site=&source=hp&q={search_query}&btnG=Search&oq=&gs_l="
+            if self.search_mode == "radiopaedia":
+                radiopaedia_url = f"https://www.radiopaedia.org/search?num=50&safe=off&site=&source=hp&q={txt}&btnG=Search&oq=&gs_l="
                 webbrowser.open(radiopaedia_url)
                 self.close()
-            elif txt.startswith("RA "):
-                search_query = txt[3:].strip()
-                radiology_assistant_url = f"https://www.radiologyassistant.nl/search?q={search_query}"
+            elif self.search_mode == "radiology_assistant":
+                radiology_assistant_url = f"https://www.radiologyassistant.nl/search?q={txt}"
                 webbrowser.open(radiology_assistant_url)
                 self.close()
-            elif txt.startswith("S "):
-                search_query = txt[2:].strip()
-                statdx_url = f"https://app.statdx.com/search?term={search_query}&startIndex=0&documentTypeFilters=all&searchType=documents&category=All"
+            elif self.search_mode == "statdx":
+                statdx_url = f"https://app.statdx.com/search?term={txt}&startIndex=0&documentTypeFilters=all&searchType=documents&category=All"
                 webbrowser.open(statdx_url)
                 self.close()
-            elif txt.startswith("I "):
-                search_query = txt[2:].strip()
-                google_images_url = f"https://www.google.com/search?num=50&safe=off&site=&tbm=isch&q=radiology%20{search_query}"
+            elif self.search_mode == "google_images":
+                google_images_url = f"https://www.google.com/search?num=50&safe=off&site=&tbm=isch&q=radiology%20{txt}"
                 webbrowser.open(google_images_url)
                 self.close()
             else:
+                # Use AI if no search prefix was detected
                 self.app.process_option('Custom', self.selected_text, txt)
                 self.close()
 
@@ -938,16 +960,3 @@ class CustomPopupWindow(QtWidgets.QWidget):
             self.close()
         else:
             super().keyPressEvent(event)
-
-    def handle_text_change(self, text):
-        text_upper = text.upper()  # Convert to uppercase for case-insensitive comparison
-        if text_upper.startswith("R "):
-            self.custom_input.setPlaceholderText("Search Radiopaedia...")
-        elif text_upper.startswith("RA "):
-            self.custom_input.setPlaceholderText("Search Radiology Assistant...")
-        elif text_upper.startswith("S "):
-            self.custom_input.setPlaceholderText("Search StatDx...")
-        elif text_upper.startswith("I "):
-            self.custom_input.setPlaceholderText("Search Google Images...")
-        else:
-            self.custom_input.setPlaceholderText("Graydient")
