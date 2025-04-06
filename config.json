@@ -1,0 +1,14 @@
+{
+    "shortcut": "F8",
+    "theme": "gradient",
+    "providers": {
+        "Gemini (Recommended)": {
+            "api_key": "AIzaSyCLgK2IABcKddH1EZ5c4LmuXkInsvOE_N8",
+            "model_name": "gemini-2.0-flash"
+        }
+    },
+    "locale": "en",
+    "streaming": false,
+    "provider": "Gemini (Recommended)",
+    "update_available": true
+}

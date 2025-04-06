@@ -17,7 +17,7 @@ Key Components:
       • Cancelling an ongoing request
 
 3. Provider Implementations:
-    • GeminiProvider – Uses Google’s Generative AI API (Gemini) to generate content.
+    • GeminiProvider – Uses Google's Generative AI API (Gemini) to generate content.
     • OpenAICompatibleProvider – Connects to any OpenAI-compatible API (v1/chat/completions)
     • OllamaProvider – Connects to a locally running Ollama server (e.g. for llama.cpp)
 
@@ -245,7 +245,7 @@ class GeminiProvider(AIProvider):
             )
         ]
         super().__init__(app, "Gemini (Recommended)", settings,
-            "• Google’s Gemini is a powerful AI model available for free!\n"
+            "• Google's Gemini is a powerful AI model available for free!\n"
             "• An API key is required to connect to Gemini on your behalf.\n"
             "• Click the button below to get your API key.",
             "gemini",
@@ -300,7 +300,6 @@ class GeminiProvider(AIProvider):
                 HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
                 HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
                 HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-                HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY: HarmBlockThreshold.BLOCK_NONE,
             }
         )
 

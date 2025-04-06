@@ -38,6 +38,7 @@ class WritingToolApp(QtWidgets.QApplication):
 
     def __init__(self, argv):
         super().__init__(argv)
+        print("Initializing WritingToolApp...")
         self.current_response_window = None
         logging.debug('Initializing WritingToolApp')
         self.output_ready_signal.connect(self.replace_text)
@@ -45,9 +46,11 @@ class WritingToolApp(QtWidgets.QApplication):
         self.hotkey_triggered_signal.connect(self.on_hotkey_pressed)
         self.config = None
         self.config_path = None
+        print("Loading config...")
         self.load_config()
         self.options = None
         self.options_path = None
+        print("Config loaded successfully")
         self.load_options()
         self.onboarding_window = None
         self.popup_window = None
@@ -295,9 +298,10 @@ class WritingToolApp(QtWidgets.QApplication):
             logging.debug('Creating new popup window')
             self.popup_window = ui.CustomPopupWindow.CustomPopupWindow(self, selected_text)
 
-            # Set the window icon
-            icon_path = os.path.join(os.path.dirname(sys.argv[0]), 'icons', 'app_icon.png')
-            if os.path.exists(icon_path): self.setWindowIcon(QtGui.QIcon(icon_path))
+            # Set window icon
+            icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'Windows_and_Linux', 'icons', 'app_icon.png')
+            if os.path.exists(icon_path):
+                self.setWindowIcon(QtGui.QIcon(icon_path))
             # Get the screen containing the cursor
             cursor_pos = QCursor.pos()
             screen = QGuiApplication.screenAt(cursor_pos)
@@ -553,11 +557,15 @@ class WritingToolApp(QtWidgets.QApplication):
             return
 
         logging.debug('Creating system tray icon')
-        icon_path = os.path.join(os.path.dirname(sys.argv[0]), 'icons', 'app_icon.png')
+        # Create tray icon
+        icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'Windows_and_Linux', 'icons', 'app_icon.png')
         if not os.path.exists(icon_path):
             logging.warning(f'Tray icon not found at {icon_path}')
-            # Use a default icon if not found
-            self.tray_icon = QtWidgets.QSystemTrayIcon(self)
+            # Try alternative path
+            icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'icons', 'app_icon.png')
+            if not os.path.exists(icon_path):
+                logging.warning(f'Tray icon not found at {icon_path}')
+                return
         else:
             self.tray_icon = QtWidgets.QSystemTrayIcon(QtGui.QIcon(icon_path), self)
         # Set the tooltip (hover name) for the tray icon

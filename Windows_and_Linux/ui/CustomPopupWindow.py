@@ -463,7 +463,7 @@ class CustomPopupWindow(QtWidgets.QWidget):
         input_layout.setContentsMargins(0,0,0,0)
         
         self.custom_input = QLineEdit()
-        self.custom_input.setPlaceholderText(_("Describe your change...") if self.has_text else _("Ask your AI..."))
+        self.custom_input.setPlaceholderText("Graydient")
         self.custom_input.setStyleSheet(f"""
             QLineEdit {{
                 padding: 8px;
@@ -474,6 +474,7 @@ class CustomPopupWindow(QtWidgets.QWidget):
             }}
         """)
         self.custom_input.returnPressed.connect(self.on_custom_change)
+        self.custom_input.textChanged.connect(self.handle_text_change)
         input_layout.addWidget(self.custom_input)
         
         send_btn = QPushButton()
@@ -937,3 +938,16 @@ class CustomPopupWindow(QtWidgets.QWidget):
             self.close()
         else:
             super().keyPressEvent(event)
+
+    def handle_text_change(self, text):
+        text_upper = text.upper()  # Convert to uppercase for case-insensitive comparison
+        if text_upper.startswith("R "):
+            self.custom_input.setPlaceholderText("Search Radiopaedia...")
+        elif text_upper.startswith("RA "):
+            self.custom_input.setPlaceholderText("Search Radiology Assistant...")
+        elif text_upper.startswith("S "):
+            self.custom_input.setPlaceholderText("Search StatDx...")
+        elif text_upper.startswith("I "):
+            self.custom_input.setPlaceholderText("Search Google Images...")
+        else:
+            self.custom_input.setPlaceholderText("Graydient")
