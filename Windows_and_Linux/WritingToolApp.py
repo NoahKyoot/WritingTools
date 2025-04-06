@@ -22,6 +22,7 @@ import ui.ResponseWindow
 import ui.SettingsWindow
 from aiprovider import GeminiProvider, OllamaProvider, OpenAICompatibleProvider
 from update_checker import UpdateChecker
+from .secure_config import SecureConfig
 
 _ = gettext.gettext
 
@@ -38,19 +39,24 @@ class WritingToolApp(QtWidgets.QApplication):
 
     def __init__(self, argv):
         super().__init__(argv)
-        print("Initializing WritingToolApp...")
+        self.setQuitOnLastWindowClosed(False)
+        
+        # Initialize secure configuration
+        self.config = SecureConfig()
+        
+        # Set up logging
+        logging.basicConfig(level=logging.DEBUG)
+        self.logger = logging.getLogger(__name__)
+        
+        self.logger.debug("Initializing WritingToolApp")
         self.current_response_window = None
-        logging.debug('Initializing WritingToolApp')
         self.output_ready_signal.connect(self.replace_text)
         self.show_message_signal.connect(self.show_message_box)
         self.hotkey_triggered_signal.connect(self.on_hotkey_pressed)
-        self.config = None
-        self.config_path = None
-        print("Loading config...")
-        self.load_config()
         self.options = None
         self.options_path = None
-        print("Config loaded successfully")
+        self.logger.debug("Loading config...")
+        self.load_config()
         self.load_options()
         self.onboarding_window = None
         self.popup_window = None
@@ -557,17 +563,28 @@ class WritingToolApp(QtWidgets.QApplication):
             return
 
         logging.debug('Creating system tray icon')
+        
         # Create tray icon
-        icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'Windows_and_Linux', 'icons', 'app_icon.png')
-        if not os.path.exists(icon_path):
-            logging.warning(f'Tray icon not found at {icon_path}')
-            # Try alternative path
-            icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'icons', 'app_icon.png')
-            if not os.path.exists(icon_path):
-                logging.warning(f'Tray icon not found at {icon_path}')
-                return
-        else:
-            self.tray_icon = QtWidgets.QSystemTrayIcon(QtGui.QIcon(icon_path), self)
+        self.tray_icon = QtWidgets.QSystemTrayIcon(self)
+        
+        # Try to find the icon file
+        icon_paths = [
+            os.path.join(os.path.dirname(__file__), 'icons', 'tray' + ('_dark' if self.config.get('theme') == 'dark' else '_light') + '.png'),
+            os.path.join(os.path.dirname(__file__), 'icons', 'app_icon.png'),
+            os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'Windows_and_Linux', 'icons', 'app_icon.png')
+        ]
+        
+        icon_found = False
+        for icon_path in icon_paths:
+            if os.path.exists(icon_path):
+                self.tray_icon.setIcon(QtGui.QIcon(icon_path))
+                icon_found = True
+                logging.debug(f'Using icon from: {icon_path}')
+                break
+        
+        if not icon_found:
+            logging.warning('No suitable icon found')
+            
         # Set the tooltip (hover name) for the tray icon
         self.tray_icon.setToolTip("WritingTools")
         self.tray_menu = QtWidgets.QMenu()

@@ -1,0 +1,373 @@
+2025-04-05 22:01:14,872 - INFO - Starting application...
+2025-04-05 22:01:14,873 - INFO - Base directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-05 22:01:14,873 - INFO - Python path: ['C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\Windows_and_Linux', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\python313.zip', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\DLLs', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\Lib', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env\\Lib\\site-packages']
+2025-04-05 22:01:14,874 - INFO - Current working directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-05 22:01:16,525 - INFO - Successfully imported WritingToolApp
+2025-04-05 22:01:16,613 - DEBUG - Initializing WritingToolApp
+2025-04-05 22:01:16,614 - DEBUG - Loading config from config.json
+2025-04-05 22:01:16,614 - DEBUG - Config loaded successfully
+2025-04-05 22:01:16,614 - DEBUG - Loading options from options.json
+2025-04-05 22:01:16,614 - DEBUG - Options loaded successfully
+2025-04-05 22:01:16,614 - DEBUG - Config found, setting up hotkey and tray icon
+2025-04-05 22:01:16,614 - DEBUG - Creating system tray icon
+2025-04-05 22:01:16,642 - DEBUG - Tray icon dark
+2025-04-05 22:01:16,644 - DEBUG - Tray icon displayed
+2025-04-05 22:01:16,644 - DEBUG - Registering hotkey
+2025-04-05 22:01:16,644 - DEBUG - Registering global hotkey for shortcut: <F8>
+2025-04-05 22:01:16,651 - DEBUG - Hotkey registered
+2025-04-05 22:01:16,652 - DEBUG - Tray icon dark
+2025-04-05 22:01:16,652 - INFO - Application initialized successfully
+2025-04-05 22:01:16,843 - DEBUG - Config saved successfully
+2025-04-05 22:01:20,411 - DEBUG - triggered hotkey
+2025-04-05 22:01:20,412 - DEBUG - Hotkey pressed
+2025-04-05 22:01:20,412 - DEBUG - Cancelling current provider's request
+2025-04-05 22:01:20,412 - DEBUG - Showing popup window
+2025-04-05 22:01:20,412 - DEBUG - Clipboard backup: "ERROR: Ignored the following versions that require a different python version: 4.10 Requires-Python <3.11,>=3.6; 4.6 Requires-Python <3.11,>=3.6; 4.7 Requires-Python <3.11,>=3.6; 4.8 Requires-Python <3.11,>=3.6; 4.9 Requires-Python <3.11,>=3.6; 5.0 Requires-Python <3.11,>=3.7; 5.0.1 Requires-Python <3.11,>=3.7; 5.1 Requires-Python <3.11,>=3.7; 5.10.0 Requires-Python <3.12,>=3.7; 5.10.1 Requires-Python <3.12,>=3.7; 5.11.0 Requires-Python <3.12,>=3.7; 5.12.0 Requires-Python <3.12,>=3.7; 5.13.0 Requires-Python <3.13,>=3.7; 5.13.1 Requires-Python <3.13,>=3.7; 5.13.2 Requires-Python <3.13,>=3.7; 5.2 Requires-Python <3.11,>=3.7; 5.3 Requires-Python <3.11,>=3.7; 5.4 Requires-Python <3.11,>=3.7; 5.4.1 Requires-Python <3.11,>=3.7; 5.5 Requires-Python <3.12,>=3.7; 5.6 Requires-Python <3.12,>=3.7; 5.6.1 Requires-Python <3.12,>=3.7; 5.6.2 Requires-Python <3.12,>=3.7; 5.7.0 Requires-Python <3.12,>=3.7; 5.8.0 Requires-Python <3.12,>=3.7; 5.9.0 Requires-Python <3.12,>=3.7; 6.0.0 Requires-Python <3.13,>=3.8; 6.1.0 Requires-Python <3.13,>=3.8; 6.2.0 Requires-Python <3.13,>=3.8; 6.3.0 Requires-Python <3.13,>=3.8; 6.4.0 Requires-Python <3.13,>=3.8; 6.5.0 Requires-Python <3.13,>=3.8; 6.6.0 Requires-Python <3.13,>=3.8; 6.7.0 Requires-Python <3.13,>=3.8; 6.8.0 Requires-Python <3.13,>=3.8; 6.9.0 Requires-Python <3.13,>=3.8
+ERROR: Could not find a version that satisfies the requirement pyinstaller==6.3.0 (from versions: 2.0, 2.1, 3.0, 3.1, 3.1.1, 3.2, 3.2.1, 3.3, 3.3.1, 3.4, 3.5, 3.6, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.5.1, 6.10.0, 6.11.0, 6.11.1, 6.12.0)" (sleep: 0.2s)
+2025-04-05 22:01:20,414 - DEBUG - Simulating Ctrl+C
+2025-04-05 22:01:20,618 - DEBUG - Waited 0.2s for clipboard
+2025-04-05 22:01:20,621 - DEBUG - Selected text: "this si a tset. "
+2025-04-05 22:01:20,621 - DEBUG - Creating new popup window
+2025-04-05 22:01:20,621 - DEBUG - Initializing CustomPopupWindow
+2025-04-05 22:01:20,626 - DEBUG - Options loaded successfully
+2025-04-05 22:01:20,626 - DEBUG - DraggableButton initialized
+2025-04-05 22:01:20,626 - DEBUG - DraggableButton initialized
+2025-04-05 22:01:20,627 - DEBUG - DraggableButton initialized
+2025-04-05 22:01:20,627 - DEBUG - DraggableButton initialized
+2025-04-05 22:01:20,627 - DEBUG - DraggableButton initialized
+2025-04-05 22:01:20,627 - DEBUG - DraggableButton initialized
+2025-04-05 22:01:20,628 - DEBUG - DraggableButton initialized
+2025-04-05 22:01:20,628 - DEBUG - DraggableButton initialized
+2025-04-05 22:01:20,629 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-05 22:01:20,633 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-05 22:01:20,634 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-05 22:01:20,709 - DEBUG - Popup window moved to position: (299, 364)
+2025-04-05 22:01:22,260 - DEBUG - Processing option: Proofread
+2025-04-05 22:01:22,261 - DEBUG - Starting processing thread for option: Proofread
+2025-04-05 22:01:22,270 - DEBUG - Getting response from provider for option: Proofread
+2025-04-05 22:01:22,271 - DEBUG - Getting response for direct replacement
+2025-04-06 09:15:55,723 - INFO - Starting application...
+2025-04-06 09:15:55,723 - INFO - Base directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:15:55,723 - INFO - Python path: ['C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\Windows_and_Linux', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\python313.zip', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\DLLs', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\Lib', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env\\Lib\\site-packages']
+2025-04-06 09:15:55,723 - INFO - Current working directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:15:57,679 - INFO - Successfully imported WritingToolApp
+2025-04-06 09:15:57,789 - DEBUG - Initializing WritingToolApp
+2025-04-06 09:15:57,789 - DEBUG - Loading config from config.json
+2025-04-06 09:15:57,790 - DEBUG - Config loaded successfully
+2025-04-06 09:15:57,790 - DEBUG - Loading options from options.json
+2025-04-06 09:15:57,795 - DEBUG - Options loaded successfully
+2025-04-06 09:15:57,795 - DEBUG - Config found, setting up hotkey and tray icon
+2025-04-06 09:15:57,795 - DEBUG - Creating system tray icon
+2025-04-06 09:15:57,807 - DEBUG - Tray icon dark
+2025-04-06 09:15:57,816 - DEBUG - Tray icon displayed
+2025-04-06 09:15:57,816 - DEBUG - Registering hotkey
+2025-04-06 09:15:57,816 - DEBUG - Registering global hotkey for shortcut: <F8>
+2025-04-06 09:15:57,828 - DEBUG - Hotkey registered
+2025-04-06 09:15:57,842 - DEBUG - Tray icon dark
+2025-04-06 09:15:57,842 - INFO - Application initialized successfully
+2025-04-06 09:15:58,068 - DEBUG - Config saved successfully
+2025-04-06 09:16:12,914 - DEBUG - triggered hotkey
+2025-04-06 09:16:12,914 - DEBUG - Hotkey pressed
+2025-04-06 09:16:12,914 - DEBUG - Cancelling current provider's request
+2025-04-06 09:16:12,914 - DEBUG - Showing popup window
+2025-04-06 09:16:12,919 - DEBUG - Clipboard backup: "ERROR: Ignored the following versions that require a different python version: 4.10 Requires-Python <3.11,>=3.6; 4.6 Requires-Python <3.11,>=3.6; 4.7 Requires-Python <3.11,>=3.6; 4.8 Requires-Python <3.11,>=3.6; 4.9 Requires-Python <3.11,>=3.6; 5.0 Requires-Python <3.11,>=3.7; 5.0.1 Requires-Python <3.11,>=3.7; 5.1 Requires-Python <3.11,>=3.7; 5.10.0 Requires-Python <3.12,>=3.7; 5.10.1 Requires-Python <3.12,>=3.7; 5.11.0 Requires-Python <3.12,>=3.7; 5.12.0 Requires-Python <3.12,>=3.7; 5.13.0 Requires-Python <3.13,>=3.7; 5.13.1 Requires-Python <3.13,>=3.7; 5.13.2 Requires-Python <3.13,>=3.7; 5.2 Requires-Python <3.11,>=3.7; 5.3 Requires-Python <3.11,>=3.7; 5.4 Requires-Python <3.11,>=3.7; 5.4.1 Requires-Python <3.11,>=3.7; 5.5 Requires-Python <3.12,>=3.7; 5.6 Requires-Python <3.12,>=3.7; 5.6.1 Requires-Python <3.12,>=3.7; 5.6.2 Requires-Python <3.12,>=3.7; 5.7.0 Requires-Python <3.12,>=3.7; 5.8.0 Requires-Python <3.12,>=3.7; 5.9.0 Requires-Python <3.12,>=3.7; 6.0.0 Requires-Python <3.13,>=3.8; 6.1.0 Requires-Python <3.13,>=3.8; 6.2.0 Requires-Python <3.13,>=3.8; 6.3.0 Requires-Python <3.13,>=3.8; 6.4.0 Requires-Python <3.13,>=3.8; 6.5.0 Requires-Python <3.13,>=3.8; 6.6.0 Requires-Python <3.13,>=3.8; 6.7.0 Requires-Python <3.13,>=3.8; 6.8.0 Requires-Python <3.13,>=3.8; 6.9.0 Requires-Python <3.13,>=3.8
+ERROR: Could not find a version that satisfies the requirement pyinstaller==6.3.0 (from versions: 2.0, 2.1, 3.0, 3.1, 3.1.1, 3.2, 3.2.1, 3.3, 3.3.1, 3.4, 3.5, 3.6, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.5.1, 6.10.0, 6.11.0, 6.11.1, 6.12.0)" (sleep: 0.2s)
+2025-04-06 09:16:12,925 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:16:13,130 - DEBUG - Waited 0.2s for clipboard
+2025-04-06 09:16:13,139 - DEBUG - No text captured, retrying with longer sleep
+2025-04-06 09:16:13,140 - DEBUG - Clipboard backup: "ERROR: Ignored the following versions that require a different python version: 4.10 Requires-Python <3.11,>=3.6; 4.6 Requires-Python <3.11,>=3.6; 4.7 Requires-Python <3.11,>=3.6; 4.8 Requires-Python <3.11,>=3.6; 4.9 Requires-Python <3.11,>=3.6; 5.0 Requires-Python <3.11,>=3.7; 5.0.1 Requires-Python <3.11,>=3.7; 5.1 Requires-Python <3.11,>=3.7; 5.10.0 Requires-Python <3.12,>=3.7; 5.10.1 Requires-Python <3.12,>=3.7; 5.11.0 Requires-Python <3.12,>=3.7; 5.12.0 Requires-Python <3.12,>=3.7; 5.13.0 Requires-Python <3.13,>=3.7; 5.13.1 Requires-Python <3.13,>=3.7; 5.13.2 Requires-Python <3.13,>=3.7; 5.2 Requires-Python <3.11,>=3.7; 5.3 Requires-Python <3.11,>=3.7; 5.4 Requires-Python <3.11,>=3.7; 5.4.1 Requires-Python <3.11,>=3.7; 5.5 Requires-Python <3.12,>=3.7; 5.6 Requires-Python <3.12,>=3.7; 5.6.1 Requires-Python <3.12,>=3.7; 5.6.2 Requires-Python <3.12,>=3.7; 5.7.0 Requires-Python <3.12,>=3.7; 5.8.0 Requires-Python <3.12,>=3.7; 5.9.0 Requires-Python <3.12,>=3.7; 6.0.0 Requires-Python <3.13,>=3.8; 6.1.0 Requires-Python <3.13,>=3.8; 6.2.0 Requires-Python <3.13,>=3.8; 6.3.0 Requires-Python <3.13,>=3.8; 6.4.0 Requires-Python <3.13,>=3.8; 6.5.0 Requires-Python <3.13,>=3.8; 6.6.0 Requires-Python <3.13,>=3.8; 6.7.0 Requires-Python <3.13,>=3.8; 6.8.0 Requires-Python <3.13,>=3.8; 6.9.0 Requires-Python <3.13,>=3.8
+ERROR: Could not find a version that satisfies the requirement pyinstaller==6.3.0 (from versions: 2.0, 2.1, 3.0, 3.1, 3.1.1, 3.2, 3.2.1, 3.3, 3.3.1, 3.4, 3.5, 3.6, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.5.1, 6.10.0, 6.11.0, 6.11.1, 6.12.0)" (sleep: 0.5s)
+2025-04-06 09:16:13,147 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:16:13,652 - DEBUG - Waited 0.5s for clipboard
+2025-04-06 09:16:13,666 - DEBUG - Selected text: ""
+2025-04-06 09:16:13,666 - DEBUG - Creating new popup window
+2025-04-06 09:16:13,667 - DEBUG - Initializing CustomPopupWindow
+2025-04-06 09:16:13,704 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-06 09:16:13,708 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-06 09:16:13,708 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-06 09:16:13,803 - DEBUG - Popup window moved to position: (1681, 988)
+2025-04-06 09:27:13,933 - INFO - Starting application...
+2025-04-06 09:27:13,933 - INFO - Base directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:27:13,933 - INFO - Python path: ['C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\Windows_and_Linux', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\python313.zip', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\DLLs', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\Lib', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env\\Lib\\site-packages']
+2025-04-06 09:27:13,933 - INFO - Current working directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:27:15,300 - INFO - Successfully imported WritingToolApp
+2025-04-06 09:27:15,391 - DEBUG - Initializing WritingToolApp
+2025-04-06 09:27:15,391 - DEBUG - Loading config...
+2025-04-06 09:27:15,391 - DEBUG - Loading config from config.json
+2025-04-06 09:27:15,391 - DEBUG - Config loaded successfully
+2025-04-06 09:27:15,392 - DEBUG - Loading options from options.json
+2025-04-06 09:27:15,392 - DEBUG - Options loaded successfully
+2025-04-06 09:27:15,392 - DEBUG - Config found, setting up hotkey and tray icon
+2025-04-06 09:27:15,392 - DEBUG - Creating system tray icon
+2025-04-06 09:27:15,392 - ERROR - Error: 'dict' object has no attribute 'get_config'
+2025-04-06 09:27:15,415 - ERROR - Traceback (most recent call last):
+  File "C:\Users\corre\Documents\GitHub\WritingTools\run_app.py", line 35, in main
+    app = WritingToolApp(sys.argv)
+  File "C:\Users\corre\Documents\GitHub\WritingTools\Windows_and_Linux\WritingToolApp.py", line 99, in __init__
+    self.create_tray_icon()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\corre\Documents\GitHub\WritingTools\Windows_and_Linux\WritingToolApp.py", line 568, in create_tray_icon
+    'tray' + ('_dark' if self.config.get_config().get('theme') == 'dark' else '_light') + '.png')
+                         ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'get_config'
+
+2025-04-06 09:27:35,609 - INFO - Starting application...
+2025-04-06 09:27:35,609 - INFO - Base directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:27:35,610 - INFO - Python path: ['C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\Windows_and_Linux', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\python313.zip', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\DLLs', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\Lib', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env\\Lib\\site-packages']
+2025-04-06 09:27:35,610 - INFO - Current working directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:27:36,942 - INFO - Successfully imported WritingToolApp
+2025-04-06 09:27:37,030 - DEBUG - Initializing WritingToolApp
+2025-04-06 09:27:37,030 - DEBUG - Loading config...
+2025-04-06 09:27:37,030 - DEBUG - Loading config from config.json
+2025-04-06 09:27:37,031 - DEBUG - Config loaded successfully
+2025-04-06 09:27:37,031 - DEBUG - Loading options from options.json
+2025-04-06 09:27:37,031 - DEBUG - Options loaded successfully
+2025-04-06 09:27:37,031 - DEBUG - Config found, setting up hotkey and tray icon
+2025-04-06 09:27:37,031 - DEBUG - Creating system tray icon
+2025-04-06 09:27:37,031 - WARNING - Tray icon not found at C:\Users\corre\Documents\GitHub\WritingTools\Windows_and_Linux\icons\tray_light.png
+2025-04-06 09:27:37,031 - ERROR - Error: 'NoneType' object has no attribute 'setToolTip'
+2025-04-06 09:27:37,033 - ERROR - Traceback (most recent call last):
+  File "C:\Users\corre\Documents\GitHub\WritingTools\run_app.py", line 35, in main
+    app = WritingToolApp(sys.argv)
+  File "C:\Users\corre\Documents\GitHub\WritingTools\Windows_and_Linux\WritingToolApp.py", line 99, in __init__
+    self.create_tray_icon()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\corre\Documents\GitHub\WritingTools\Windows_and_Linux\WritingToolApp.py", line 579, in create_tray_icon
+    self.tray_icon.setToolTip("WritingTools")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setToolTip'
+
+2025-04-06 09:28:04,285 - INFO - Starting application...
+2025-04-06 09:28:04,285 - INFO - Base directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:28:04,285 - INFO - Python path: ['C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\Windows_and_Linux', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\python313.zip', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\DLLs', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\Lib', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env\\Lib\\site-packages']
+2025-04-06 09:28:04,285 - INFO - Current working directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:28:05,660 - INFO - Successfully imported WritingToolApp
+2025-04-06 09:28:05,751 - DEBUG - Initializing WritingToolApp
+2025-04-06 09:28:05,751 - DEBUG - Loading config...
+2025-04-06 09:28:05,751 - DEBUG - Loading config from config.json
+2025-04-06 09:28:05,751 - DEBUG - Config loaded successfully
+2025-04-06 09:28:05,751 - DEBUG - Loading options from options.json
+2025-04-06 09:28:05,752 - DEBUG - Options loaded successfully
+2025-04-06 09:28:05,752 - DEBUG - Config found, setting up hotkey and tray icon
+2025-04-06 09:28:05,752 - DEBUG - Creating system tray icon
+2025-04-06 09:28:05,763 - DEBUG - Using icon from: C:\Users\corre\Documents\GitHub\WritingTools\Windows_and_Linux\icons\app_icon.png
+2025-04-06 09:28:05,764 - DEBUG - Tray icon dark
+2025-04-06 09:28:05,766 - DEBUG - Tray icon displayed
+2025-04-06 09:28:05,766 - DEBUG - Registering hotkey
+2025-04-06 09:28:05,766 - DEBUG - Registering global hotkey for shortcut: <F8>
+2025-04-06 09:28:05,772 - DEBUG - Hotkey registered
+2025-04-06 09:28:05,773 - DEBUG - Tray icon dark
+2025-04-06 09:28:05,774 - INFO - Application initialized successfully
+2025-04-06 09:28:05,967 - DEBUG - Config saved successfully
+2025-04-06 09:28:08,816 - INFO - Received SIGINT. Exiting...
+2025-04-06 09:28:08,816 - DEBUG - Stopping the listener
+2025-04-06 09:28:08,816 - DEBUG - Exiting application
+2025-04-06 09:29:14,262 - INFO - Starting application...
+2025-04-06 09:29:14,262 - INFO - Base directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:29:14,262 - INFO - Python path: ['C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\Windows_and_Linux', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\python313.zip', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\DLLs', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313\\Lib', 'C:\\Users\\corre\\AppData\\Local\\Programs\\Python\\Python313', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env', 'C:\\Users\\corre\\Documents\\GitHub\\WritingTools\\py311env\\Lib\\site-packages']
+2025-04-06 09:29:14,262 - INFO - Current working directory: C:\Users\corre\Documents\GitHub\WritingTools
+2025-04-06 09:29:15,611 - INFO - Successfully imported WritingToolApp
+2025-04-06 09:29:15,700 - DEBUG - Initializing WritingToolApp
+2025-04-06 09:29:15,700 - DEBUG - Loading config...
+2025-04-06 09:29:15,700 - DEBUG - Loading config from config.json
+2025-04-06 09:29:15,701 - DEBUG - Config loaded successfully
+2025-04-06 09:29:15,701 - DEBUG - Loading options from options.json
+2025-04-06 09:29:15,701 - DEBUG - Options loaded successfully
+2025-04-06 09:29:15,701 - DEBUG - Config found, setting up hotkey and tray icon
+2025-04-06 09:29:15,702 - DEBUG - Creating system tray icon
+2025-04-06 09:29:15,711 - DEBUG - Using icon from: C:\Users\corre\Documents\GitHub\WritingTools\Windows_and_Linux\icons\app_icon.png
+2025-04-06 09:29:15,712 - DEBUG - Tray icon dark
+2025-04-06 09:29:15,715 - DEBUG - Tray icon displayed
+2025-04-06 09:29:15,715 - DEBUG - Registering hotkey
+2025-04-06 09:29:15,715 - DEBUG - Registering global hotkey for shortcut: <F8>
+2025-04-06 09:29:15,719 - DEBUG - Hotkey registered
+2025-04-06 09:29:15,720 - DEBUG - Tray icon dark
+2025-04-06 09:29:15,721 - INFO - Application initialized successfully
+2025-04-06 09:29:15,819 - DEBUG - Config saved successfully
+2025-04-06 09:29:39,384 - DEBUG - Showing settings window
+2025-04-06 09:32:08,966 - DEBUG - Config saved successfully
+2025-04-06 09:32:08,967 - DEBUG - Registering hotkey
+2025-04-06 09:32:08,967 - DEBUG - Registering global hotkey for shortcut: <F8>
+2025-04-06 09:32:08,976 - DEBUG - Hotkey registered
+2025-04-06 09:32:16,180 - DEBUG - triggered hotkey
+2025-04-06 09:32:16,182 - DEBUG - Hotkey pressed
+2025-04-06 09:32:16,183 - DEBUG - Cancelling current provider's request
+2025-04-06 09:32:16,183 - DEBUG - Showing popup window
+2025-04-06 09:32:16,183 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.2s)
+2025-04-06 09:32:16,185 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:32:16,390 - DEBUG - Waited 0.2s for clipboard
+2025-04-06 09:32:16,401 - DEBUG - No text captured, retrying with longer sleep
+2025-04-06 09:32:16,401 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.5s)
+2025-04-06 09:32:16,416 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:32:16,919 - DEBUG - Waited 0.5s for clipboard
+2025-04-06 09:32:16,927 - DEBUG - Selected text: ""
+2025-04-06 09:32:16,927 - DEBUG - Creating new popup window
+2025-04-06 09:32:16,927 - DEBUG - Initializing CustomPopupWindow
+2025-04-06 09:32:16,929 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-06 09:32:16,931 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-06 09:32:16,931 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-06 09:32:16,955 - DEBUG - Popup window moved to position: (1936, 1280)
+2025-04-06 09:32:26,104 - DEBUG - triggered hotkey
+2025-04-06 09:32:26,105 - DEBUG - Hotkey pressed
+2025-04-06 09:32:26,105 - DEBUG - Cancelling current provider's request
+2025-04-06 09:32:26,106 - DEBUG - Showing popup window
+2025-04-06 09:32:26,106 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.2s)
+2025-04-06 09:32:26,109 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:32:26,312 - DEBUG - Waited 0.2s for clipboard
+2025-04-06 09:32:26,314 - DEBUG - Selected text: "This si a tset."
+2025-04-06 09:32:26,315 - DEBUG - Existing popup window found
+2025-04-06 09:32:26,316 - DEBUG - Creating new popup window
+2025-04-06 09:32:26,316 - DEBUG - Initializing CustomPopupWindow
+2025-04-06 09:32:26,318 - DEBUG - Options loaded successfully
+2025-04-06 09:32:26,318 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:26,318 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:26,318 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:26,319 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:26,319 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:26,319 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:26,319 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:26,320 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:26,320 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-06 09:32:26,321 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-06 09:32:26,321 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-06 09:32:26,345 - DEBUG - Popup window moved to position: (365, 536)
+2025-04-06 09:32:27,500 - DEBUG - Processing option: Proofread
+2025-04-06 09:32:27,501 - DEBUG - Starting processing thread for option: Proofread
+2025-04-06 09:32:27,514 - DEBUG - Getting response from provider for option: Proofread
+2025-04-06 09:32:27,514 - DEBUG - Getting response for direct replacement
+2025-04-06 09:32:28,056 - DEBUG - No new text to process
+2025-04-06 09:32:28,056 - DEBUG - Processing output text
+2025-04-06 09:32:28,056 - DEBUG - Response processed
+2025-04-06 09:32:42,574 - DEBUG - triggered hotkey
+2025-04-06 09:32:42,576 - DEBUG - Hotkey pressed
+2025-04-06 09:32:42,577 - DEBUG - Cancelling current provider's request
+2025-04-06 09:32:42,578 - DEBUG - Showing popup window
+2025-04-06 09:32:42,578 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.2s)
+2025-04-06 09:32:42,584 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:32:42,793 - DEBUG - Waited 0.2s for clipboard
+2025-04-06 09:32:42,798 - DEBUG - Selected text: "this si a tset. "
+2025-04-06 09:32:42,798 - DEBUG - Existing popup window found
+2025-04-06 09:32:42,798 - DEBUG - Creating new popup window
+2025-04-06 09:32:42,799 - DEBUG - Initializing CustomPopupWindow
+2025-04-06 09:32:42,800 - DEBUG - Options loaded successfully
+2025-04-06 09:32:42,801 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:42,801 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:42,801 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:42,802 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:42,802 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:42,802 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:42,802 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:42,803 - DEBUG - DraggableButton initialized
+2025-04-06 09:32:42,803 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-06 09:32:42,804 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-06 09:32:42,804 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-06 09:32:42,829 - DEBUG - Popup window moved to position: (524, 535)
+2025-04-06 09:32:44,671 - DEBUG - Processing option: Proofread
+2025-04-06 09:32:44,671 - DEBUG - Starting processing thread for option: Proofread
+2025-04-06 09:32:44,686 - DEBUG - Getting response from provider for option: Proofread
+2025-04-06 09:32:44,687 - DEBUG - Getting response for direct replacement
+2025-04-06 09:32:45,019 - DEBUG - No new text to process
+2025-04-06 09:32:45,019 - DEBUG - Processing output text
+2025-04-06 09:32:45,019 - DEBUG - Response processed
+2025-04-06 09:33:03,064 - DEBUG - triggered hotkey
+2025-04-06 09:33:03,066 - DEBUG - Hotkey pressed
+2025-04-06 09:33:03,067 - DEBUG - Cancelling current provider's request
+2025-04-06 09:33:03,068 - DEBUG - Showing popup window
+2025-04-06 09:33:03,069 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.2s)
+2025-04-06 09:33:03,076 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:33:03,282 - DEBUG - Waited 0.2s for clipboard
+2025-04-06 09:33:03,292 - DEBUG - Selected text: "The brain is housed in the neurocranium of the skull and bathed in cerebrospinal fluid. It is continuous with the cervical spinal cord at the cervicomedullary junction. The brain and spinal cord combined form the central nervous system (CNS)."
+2025-04-06 09:33:03,292 - DEBUG - Existing popup window found
+2025-04-06 09:33:03,292 - DEBUG - Creating new popup window
+2025-04-06 09:33:03,293 - DEBUG - Initializing CustomPopupWindow
+2025-04-06 09:33:03,295 - DEBUG - Options loaded successfully
+2025-04-06 09:33:03,296 - DEBUG - DraggableButton initialized
+2025-04-06 09:33:03,296 - DEBUG - DraggableButton initialized
+2025-04-06 09:33:03,296 - DEBUG - DraggableButton initialized
+2025-04-06 09:33:03,297 - DEBUG - DraggableButton initialized
+2025-04-06 09:33:03,297 - DEBUG - DraggableButton initialized
+2025-04-06 09:33:03,297 - DEBUG - DraggableButton initialized
+2025-04-06 09:33:03,297 - DEBUG - DraggableButton initialized
+2025-04-06 09:33:03,298 - DEBUG - DraggableButton initialized
+2025-04-06 09:33:03,299 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-06 09:33:03,299 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-06 09:33:03,299 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-06 09:33:03,321 - DEBUG - Popup window moved to position: (791, 799)
+2025-04-06 09:33:05,597 - DEBUG - Processing option: Summary
+2025-04-06 09:33:05,628 - DEBUG - Connecting response signals
+2025-04-06 09:33:05,628 - DEBUG - Response signals connected
+2025-04-06 09:33:05,640 - DEBUG - Starting processing thread for option: Summary
+2025-04-06 09:33:05,642 - DEBUG - Getting response from provider for option: Summary
+2025-04-06 09:33:05,642 - DEBUG - Getting response for window display
+2025-04-06 09:33:06,220 - DEBUG - Got response of length: 244
+2025-04-06 09:33:06,220 - DEBUG - Invoked set_text on response window
+2025-04-06 09:33:31,965 - DEBUG - Processing follow-up question: what is the cns
+2025-04-06 09:33:31,966 - DEBUG - Starting follow-up processing thread
+2025-04-06 09:33:31,967 - DEBUG - Sending request to AI provider
+2025-04-06 09:33:32,543 - DEBUG - Got response of length: 140
+2025-04-06 09:33:40,356 - DEBUG - triggered hotkey
+2025-04-06 09:33:40,360 - DEBUG - Hotkey pressed
+2025-04-06 09:33:40,361 - DEBUG - Cancelling current provider's request
+2025-04-06 09:33:40,362 - DEBUG - Showing popup window
+2025-04-06 09:33:40,362 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.2s)
+2025-04-06 09:33:40,368 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:33:40,574 - DEBUG - Waited 0.2s for clipboard
+2025-04-06 09:33:40,579 - DEBUG - No text captured, retrying with longer sleep
+2025-04-06 09:33:40,579 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.5s)
+2025-04-06 09:33:40,583 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:33:41,087 - DEBUG - Waited 0.5s for clipboard
+2025-04-06 09:33:41,098 - DEBUG - Selected text: ""
+2025-04-06 09:33:41,099 - DEBUG - Existing popup window found
+2025-04-06 09:33:41,099 - DEBUG - Creating new popup window
+2025-04-06 09:33:41,099 - DEBUG - Initializing CustomPopupWindow
+2025-04-06 09:33:41,102 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-06 09:33:41,103 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-06 09:33:41,103 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-06 09:33:41,128 - DEBUG - Popup window moved to position: (2103, 1216)
+2025-04-06 09:33:58,105 - DEBUG - triggered hotkey
+2025-04-06 09:33:58,107 - DEBUG - Hotkey pressed
+2025-04-06 09:33:58,107 - DEBUG - Cancelling current provider's request
+2025-04-06 09:33:58,108 - DEBUG - Showing popup window
+2025-04-06 09:33:58,109 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.2s)
+2025-04-06 09:33:58,117 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:33:58,324 - DEBUG - Waited 0.2s for clipboard
+2025-04-06 09:33:58,327 - DEBUG - No text captured, retrying with longer sleep
+2025-04-06 09:33:58,327 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.5s)
+2025-04-06 09:33:58,330 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:33:58,835 - DEBUG - Waited 0.5s for clipboard
+2025-04-06 09:33:58,844 - DEBUG - Selected text: ""
+2025-04-06 09:33:58,845 - DEBUG - Existing popup window found
+2025-04-06 09:33:58,845 - DEBUG - Creating new popup window
+2025-04-06 09:33:58,846 - DEBUG - Initializing CustomPopupWindow
+2025-04-06 09:33:58,849 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-06 09:33:58,849 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-06 09:33:58,849 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-06 09:33:58,869 - DEBUG - Popup window moved to position: (2057, 468)
+2025-04-06 09:34:04,426 - DEBUG - Processing option: Custom
+2025-04-06 09:34:04,431 - DEBUG - Connecting response signals
+2025-04-06 09:34:04,431 - DEBUG - Response signals connected
+2025-04-06 09:34:04,441 - DEBUG - Starting processing thread for option: Custom
+2025-04-06 09:34:04,444 - DEBUG - Getting response from provider for option: Custom
+2025-04-06 09:34:04,444 - DEBUG - Getting response for window display
+2025-04-06 09:34:06,145 - DEBUG - Got response of length: 1050
+2025-04-06 09:34:06,146 - DEBUG - Invoked set_text on response window
+2025-04-06 09:34:52,833 - DEBUG - triggered hotkey
+2025-04-06 09:34:52,835 - DEBUG - Hotkey pressed
+2025-04-06 09:34:52,835 - DEBUG - Cancelling current provider's request
+2025-04-06 09:34:52,836 - DEBUG - Showing popup window
+2025-04-06 09:34:52,837 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.2s)
+2025-04-06 09:34:52,842 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:34:53,049 - DEBUG - Waited 0.2s for clipboard
+2025-04-06 09:34:53,059 - DEBUG - No text captured, retrying with longer sleep
+2025-04-06 09:34:53,060 - DEBUG - Clipboard backup: "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes" (sleep: 0.5s)
+2025-04-06 09:34:53,079 - DEBUG - Simulating Ctrl+C
+2025-04-06 09:34:53,583 - DEBUG - Waited 0.5s for clipboard
+2025-04-06 09:34:53,586 - DEBUG - Selected text: ""
+2025-04-06 09:34:53,587 - DEBUG - Existing popup window found
+2025-04-06 09:34:53,588 - DEBUG - Creating new popup window
+2025-04-06 09:34:53,588 - DEBUG - Initializing CustomPopupWindow
+2025-04-06 09:34:53,590 - DEBUG - CustomPopupWindow UI setup complete
+2025-04-06 09:34:53,591 - DEBUG - Cursor is on screen: 315QHD165
+2025-04-06 09:34:53,591 - DEBUG - Screen geometry: PySide6.QtCore.QRect(0, 0, 2560, 1440)
+2025-04-06 09:34:53,615 - DEBUG - Popup window moved to position: (612, 748)
+2025-04-06 09:35:05,863 - DEBUG - Showing settings window

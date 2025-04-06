@@ -1,16 +1,25 @@
 {
     "shortcut": "F8",
-    "theme": "plain",
+    "theme": "gradient",
     "providers": {
         "Gemini (Recommended)": {
-            "api_key": "AIzaSyCLgK2IABcKddH1EZ5c4LmuXkInsvOE_N8",
+            "api_key": "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes",
             "model_name": "gemini-2.0-flash"
         },
-        "OpenAI Compatible (For Experts)": {},
-        "Ollama (For Experts)": {}
+        "OpenAI Compatible (For Experts)": {
+            "use_env": true
+        },
+        "Ollama (For Experts)": {
+            "use_env": true
+        }
     },
     "locale": "en",
     "streaming": false,
     "provider": "Gemini (Recommended)",
-    "update_available": true
+    "hotkey": "Alt+X",
+    "update_available": true,
+    "secure_config": {
+        "use_env_vars": true,
+        "env_var_prefix": "WRITING_TOOLS_"
+    }
 }
