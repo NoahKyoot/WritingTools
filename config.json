@@ -3,7 +3,7 @@
     "theme": "gradient",
     "providers": {
         "Gemini (Recommended)": {
-            "api_key": "AIzaSyAeoQ93QCHq-HwJAftO7l70rG43pusGqes",
+            "api_key": "YOUR_API_KEY_HERE",
             "model_name": "gemini-2.0-flash"
         },
         "OpenAI Compatible (For Experts)": {
